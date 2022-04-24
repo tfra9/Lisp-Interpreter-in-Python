@@ -40,6 +40,15 @@ Other Operators:
 - `(define_func (f x) (expr))` : shortcut to `(define f (lambda (x) (expr)))`
 
 
+## Example
+
+```
+> txt = "(begin (define_func (fact n) (if (<= n 1) 1 (* n (fact (- n 1))))) (fact 8))"
+> eval(parse(txt))
+40320
+```
+  
+
 ## Turing Completeness issue
 
 
